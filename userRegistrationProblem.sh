@@ -48,7 +48,7 @@ fi
 #check password
 echo -e "\n"
 read -p "Enter Password : " password
-pass_pattern="^[a-z]{8,}$"
+pass_pattern="^[a-z]*(?=.*[A-Z]).{8,}$"
 if [[ $password =~ $pass_pattern ]]
 then
 	echo "Valid Password!"
