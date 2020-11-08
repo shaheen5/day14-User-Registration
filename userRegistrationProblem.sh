@@ -24,7 +24,7 @@ fi
 #check email-id
 echo -e "\n"
 read -p "Enter Email Id : " input_email_string
-email_pattern="^[a-zA-Z]{3}[\.\_\-\+]?[a-zA-Z0-9]+\@[a-z0-9]*(\.[a-z]{2,3})(\.[a-z]{2,3})?$"
+email_pattern="^[a-zA-Z]{3}[a-zA-Z0-9\.\-\_\+]*(?<!\.|\+|\_|\-)\@[a-z0-9]*(\.[a-z]{2,3})(\.[a-z]{2,3})?$"
 if [[ $input_email_string =~ $email_pattern ]]
 then
         echo "Valid Email Id!"
